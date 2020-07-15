@@ -29,7 +29,8 @@
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12);
 
-    --hero-gradient: rgba(47, 48, 58, 0.8);
+    --hero-gradient-1: rgba(47, 48, 58, 0.8);
+    --hero-gradient-2: rgba(47, 48, 58, 0.8);
     
     --main-hover-color: #2196F3;
 
@@ -220,16 +221,13 @@ header div.section{
 
 /*Main element ===================== index.html ================================================*/
 .hero{
-    text-align: center;
-    background-image: url("../images/hero-image.jpg");
-    background-position: center;
     height: 600px;
+    text-align: center;
+    background-image:
+                linear-gradient(to right, var(--hero-gradient-1),var(--hero-gradient-2)),
+                url("../images/hero-image.jpg");
+    background-position: center;
 }
-
-    .wrapper-bg-transparent-in-hero{
-        background-color: var(--hero-gradient);
-        height: 100%;
-    }
 
     .hero h1{
         margin-top:0;
