@@ -34,6 +34,9 @@
     
     --main-hover-color: #2196F3;
 
+    --time: 250ms;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
     --max-width: 1200px;
 }
 
@@ -166,23 +169,11 @@ header div.section{
             .contact a{
                 min-height: 80px;
             }
-
+            
             .address-icon{
                 display: inline;
-            }
-          
-            .envelope .address-icon{
                 width: 16px;
                 height: 16px;
-            }
-
-            .phone .address-icon{
-                width: 10px;
-                height: 16px;
-            }
-
-            .address-icon:hover{
-                fill: var(--main-hover-color);
             }
 
                 .contact span{
@@ -221,7 +212,9 @@ header div.section{
 
 /*Main element ===================== index.html ================================================*/
 .hero{
+    margin: 0 auto;
     height: 600px;
+    max-width: 1600px;
     text-align: center;
     background-image:
                 linear-gradient(to right, var(--hero-gradient-1),var(--hero-gradient-2)),
