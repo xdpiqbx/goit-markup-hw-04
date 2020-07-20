@@ -183,7 +183,7 @@ header div.section{
             }
             
             .address-icon{
-                display: inline;
+                display: inline-block;
                 width: 16px;
                 height: 16px;
             }
@@ -194,7 +194,7 @@ header div.section{
 
 
     /*menu hover effect ==================== */
-    .active-page a{
+    .active-page{
         color: var(--main-hover-color);
     }
 
@@ -205,12 +205,15 @@ header div.section{
     }
 
     /*menu underline ==================== */
-    .active-page{
+    .active-page,
+    .menu-hover-underline{
         position: relative;
     }
-    .active-page::after{
-        width: 100%;
+
+    .active-page::after,
+    .menu-hover-underline::after{
         content: "";
+        width: 100%;
         display: block;
         position: absolute;
         bottom: 0;
@@ -218,6 +221,17 @@ header div.section{
         height: 5px;
         background-color: var(--main-hover-color);
         border-radius: 3px;
+        opacity: 0;
+    }
+
+    .active-page::after{
+        opacity: 1;
+    }
+
+    .menu-hover-underline:hover::after{
+        opacity: 1;
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
 
 
