@@ -317,12 +317,29 @@ header div.section{
         margin: 0;
     }
 
-    .placeholder-for-icon{
+        .benefits-list li h3::before{
+            content: "";
+            display: block;
+            width: 270px;
+            height: 120px;
+            background-color: var(--secondary-bg-color);
+            border-radius: 4px;
+            margin-bottom: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .antena::before{ background-image: url("../images/benefits-svg/antenna.svg"); }
+        .clock::before{ background-image: url("../images/benefits-svg/clock.svg"); }
+        .diagram::before{ background-image: url("../images/benefits-svg/diagram.svg"); }
+        .astronaut::before{ background-image: url("../images/benefits-svg/astronaut.svg"); }
+
+/*     .placeholder-for-icon{
         height: 120px;
         margin-bottom: 30px;
         background-color: var(--secondary-bg-color);
         border-radius: 4px;
-    }
+    } */
         .benefits-icon{
             width: 70px;
             height: 70px;
