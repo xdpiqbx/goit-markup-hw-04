@@ -217,7 +217,6 @@ header div.section{
         display: block;
         position: absolute;
         bottom: 0;
-        right: 0;
         height: 5px;
         background-color: var(--main-hover-color);
         border-radius: 3px;
@@ -228,9 +227,10 @@ header div.section{
         opacity: 1;
     }
 
-    .menu-hover-underline:hover::after{
+    .menu-hover-underline:hover::after,
+    .menu-hover-underline:focus::after{
         opacity: 1;
-        transition-duration: var(--transition-duration-time); 
+        transition-duration: var(--transition-duration-time);
         transition-timing-function: var(--cubic-hover);
     }
 
@@ -413,7 +413,7 @@ header div.section{
 .our-team h2{
     margin-bottom: 50px;
 }
-        
+
     .our-team-member{
         margin-right: 30px;
         padding-bottom: 24px;
@@ -443,12 +443,12 @@ header div.section{
         .our-team-member img{
             margin-bottom: 30px;
         }
-    
+
         .our-team-member h3{
             margin-top: 0;
             margin-bottom: 10px;
         }
-    
+
         .our-team-member .social{
             justify-content: center;
         }
@@ -462,16 +462,16 @@ header div.section{
             display: block;
             border-radius: 50%;
         }
-        
+
         .social .link-icon{
             border-radius: 50%;
             width: 44px;
             height: 44px;
             fill: var(--swg-icons-main-color);
         }
-                
-            .social .link-icon:hover,
-            .social .link-icon:focus{
+
+            .social a:hover .link-icon,
+            .social a:focus .link-icon{
                 background-color: var(--main-hover-color);
                 fill:var(--main-font-on-dark-fon-color);
             }
@@ -480,7 +480,7 @@ header div.section{
                 background-color:var(--social-links);
                 fill: var(--main-font-on-dark-fon-color);
             }
-            
+
 
 
 /*in section clients ===================== index.html ================================================*/
@@ -510,8 +510,8 @@ header div.section{
             fill: var(--swg-icons-main-color);
         }
 
-        .clients-list li:hover svg,
-        .clients-list li:focus svg{
+        .clients-list li a:hover svg,
+        .clients-list li a:focus svg{
             fill: var(--main-hover-color);
             transition-duration: var(--transition-duration-time); 
             transition-timing-function: var(--cubic-hover);
@@ -597,11 +597,13 @@ header div.section{
             transition-timing-function: var(--cubic-hover);
         }
         
-        .ul-portfolio li:hover .hover-text{
+        .ul-portfolio a:hover .hover-text,
+        .ul-portfolio a:focus .hover-text{
             top: 0;
         }
 
-        .ul-portfolio li:hover{
+        .ul-portfolio li:hover,
+        .ul-portfolio li:focus{
             box-sizing: border-box;
             box-shadow: var(--portfolio-card-shadow);
         }
