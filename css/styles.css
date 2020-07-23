@@ -573,12 +573,14 @@ header div.section{
             box-sizing: border-box;
             margin-right: 30px;
             margin-bottom: 30px;
+            padding-bottom: 20px;
             overflow: hidden;
         }
 
         .ul-portfolio li a div{
             position: relative;
             overflow: hidden;
+            margin-bottom: 20px;
         }
 
         .hover-text{
@@ -623,14 +625,14 @@ header div.section{
                 width: inherit;
             }
             
-            .ul-portfolio li h2,
+                .ul-portfolio li h2,
                 .ul-portfolio li p{
                     padding-left: 24px;
                     text-align: left;
                 }
                 
                 .ul-portfolio a h2{
-                    margin-top: 20px;
+                    margin-bottom: 9px;
                     color: var(--main-font-color);
                     font-family: var(--main-font-family);
                     font-style: normal;
@@ -641,8 +643,6 @@ header div.section{
                 }
                 
                 .ul-portfolio .filter{
-                    margin-top: 9px;
-                    padding-bottom: 20px;
                     color: var(--secondary-font-color);
                     font-family: var(--main-font-family);
                     font-style: normal;
